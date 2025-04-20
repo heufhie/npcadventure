@@ -12,7 +12,7 @@ const client = new Client({
 });
 
 // Replace with your real bot token and Gemini API key
-let BOT_TOKEN = '';
+let BOT_TOKEN = process.env.BOT_TOKEN;
 const genAI = new GoogleGenerativeAI('AIzaSyDaHT95wCFiw_CMUZD3A0J6U3p13petI3I');
 
 let chatHistory = {};
