@@ -66,3 +66,16 @@ client.once('ready', () => {
 });
 
 client.login(BOT_TOKEN);
+
+// ADD THIS TO PREVENT "Timed out / no open ports detected" ON RENDER
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+    res.send('Bot is alive!');
+});
+
+app.listen(PORT, () => {
+    console.log(`Web server is listening on port ${PORT}`);
+});
