@@ -29,7 +29,8 @@ async function generateResponse(prompt) {
 }
 
 client.on('messageCreate', async (message) => {
-    if (message.author.bot) return;
+    if (message.author.bot || message.channel.id !== '1363474099871027432') return;
+
 
     const userId = message.author.id;
     const content = message.content;
